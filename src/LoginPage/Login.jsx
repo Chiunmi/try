@@ -13,7 +13,10 @@ const Login = () => {
 
   return (
     <div className="login_page">
-      <div className="login_container">
+      <div
+        className="login_container"
+        style={{ height: action === "admin" ? "480px" : "570px" }}
+      >
         <div className="login_header">
           <div className="signup_logo">
             <img src={logo} alt="" className="login_logo" />

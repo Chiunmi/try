@@ -38,9 +38,6 @@
   padding-bottom: 10px;
   border-radius: 24px;
   width: 500px;
-  height: $ {
-    action==="admin"?"480px": "570px";
-  }
 }
 
 .login_logo {
