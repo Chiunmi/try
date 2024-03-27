@@ -121,3 +121,26 @@ nav li svg:hover {
   justify-content: space-between;
   /* background-color: aquamarine; */
 }
+
+.adminEdit {
+  display: flex;
+  margin-left: 59%;
+}
+
+.adminEdit .add,
+.adminEdit .edit {
+  background-color: aliceblue;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+}
+
+.adminEdit .add {
+  background-color: #5ce1e6;
+}
+
+.adminEdit .edit {
+  background-color: #7ed957;
+}

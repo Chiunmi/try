@@ -10,10 +10,48 @@ const Navbar = () => {
           <Link to="/student_index">Home</Link>
         </li>
         <li>
-          <Link to="/services">Location</Link>
+          <Link to="/location">Location</Link>
         </li>
         <li>About Us</li>
       </ul>
+
+      <div className="AdminEdit">
+        <svg
+          className="add"
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-plus"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="#003163"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 5l0 14" />
+          <path d="M5 12l14 0" />
+        </svg>
+
+        <svg
+          className="edit"
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-pencil"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="#003163"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+          <path d="M13.5 6.5l4 4" />
+        </svg>
+      </div>
       <div className="please">
         <li>
           <svg

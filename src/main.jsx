@@ -6,11 +6,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Login from "./LoginPage/Login.jsx";
 
+import Home from "./Pages/Home.jsx";
+import LocationPage from "./Pages/LocationPage.jsx";
+
 import StudentProfile from "./StudentPages/StudentProfile.jsx";
 import StudentIndex from "./StudentPages/StudentIndex.jsx";
 
 import ServicesPage from "./Pages/ServicesPage.jsx";
+import Schedule from "./Pages/Schedule.jsx";
+
 import AdminProfile from "./AdminPages/AdminProfile.jsx";
+import TelemedPage from "./Pages/TelemedPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +27,16 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+  },
+
+  {
+    path: "home",
+    element: <Home />,
+  },
+
+  {
+    path: "location",
+    element: <LocationPage />,
   },
 
   {
@@ -36,6 +52,16 @@ const router = createBrowserRouter([
   {
     path: "services",
     element: <ServicesPage />,
+  },
+
+  {
+    path: "schedule",
+    element: <Schedule />,
+  },
+
+  {
+    path: "telemed",
+    element: <TelemedPage />,
   },
 
   {
