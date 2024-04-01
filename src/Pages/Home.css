@@ -82,29 +82,6 @@
   border-radius: 12px; /* Add border radius to round the corners */
 }
 
-/* .home::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -16px;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 80px;
-    border-radius: 24px;
-    background-color: aliceblue;
-  }
-  
-  .nav ul li {
-    position: relative; /* Add this to make sure ::after is positioned relative to the list item */
-/* } */
-
-/* .header-bar .header-list li a {
-      text-decoration: none; /* Remove underline from link */
-/* } */
-nav ul li {
-  position: relative;
-  z-index: 1;
-}
 .announce {
   /* Set a maximum height for the scrollable area */
   margin-top: 2%;
@@ -146,22 +123,25 @@ nav ul li {
   padding-left: 90%;
   cursor: pointer;
 }
-
-.announcementnAdmin .announcementAdd,
-.announcementnAdmin .announcementEdit {
-  /* Your styles here */
-  /* Example styles: */
-  margin-left: 10px;
-  border-radius: 500%;
-  width: 40px;
-  height: 40px;
-  padding: 4px;
+.adminAnnounce {
+  display: flex;
+  /* background-color: pink; */
 }
 
-.announcementnAdmin .announcementAdd {
+.adminAnnounce .edit {
+  margin-left: 20px;
   background-color: #5ce1e6;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 2px;
 }
 
-.adminEdit .edit {
+.adminAnnounce .add {
+  margin-left: 10px;
   background-color: #7ed957;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 2px;
 }

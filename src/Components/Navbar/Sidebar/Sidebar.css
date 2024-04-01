@@ -28,7 +28,7 @@
 }
 
 .sidebar-list li {
-  padding: 14px;
+  padding: 16px;
   /* margin-top: 8px; */
   color: black;
   text-align: left;
@@ -41,15 +41,17 @@
   transition: all 0.3s ease;
 }
 
-.sidebar-list li:hover {
+.sidebar-list li:hover,
+.sidebar-list li.active {
   color: white;
   background-color: #003163;
   border-radius: 24px;
   margin-right: 20px;
 }
 
-.sidebar-list li svg {
-  margin-right: 16px;
+.sidebar-list svg {
+  margin-bottom: -6px;
+  margin-right: 14px;
   transition: fill 0.2s ease;
 }
 

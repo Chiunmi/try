@@ -8,15 +8,21 @@ import Login from "./LoginPage/Login.jsx";
 
 import Home from "./Pages/Home.jsx";
 import LocationPage from "./Pages/LocationPage.jsx";
+import AboutPage from "./Pages/AboutPage.jsx";
 
 import StudentProfile from "./StudentPages/StudentProfile.jsx";
 import StudentIndex from "./StudentPages/StudentIndex.jsx";
 
+import AdminProfile from "./AdminPages/AdminProfile.jsx";
+
 import ServicesPage from "./Pages/ServicesPage.jsx";
 import Schedule from "./Pages/Schedule.jsx";
-
-import AdminProfile from "./AdminPages/AdminProfile.jsx";
 import TelemedPage from "./Pages/TelemedPage.jsx";
+import EventPage from "./Pages/EventPage.jsx";
+
+import RequestPage from "./Pages/RequestPage.jsx";
+
+import HealthPage from "./Pages/HealthPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +43,11 @@ const router = createBrowserRouter([
   {
     path: "location",
     element: <LocationPage />,
+  },
+
+  {
+    path: "aboutus",
+    element: <AboutPage />,
   },
 
   {
@@ -62,6 +73,21 @@ const router = createBrowserRouter([
   {
     path: "telemed",
     element: <TelemedPage />,
+  },
+
+  {
+    path: "requestForms",
+    element: <RequestPage />,
+  },
+
+  {
+    path: "events",
+    element: <EventPage />,
+  },
+
+  {
+    path: "healthTips",
+    element: <HealthPage />,
   },
 
   {

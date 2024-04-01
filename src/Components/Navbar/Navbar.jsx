@@ -1,30 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const [activePage, setActivePage] = useState("");
+  const location = useLocation();
+
+  // Set active page on component mount and when location changes
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location]);
+
   return (
     <nav className="container">
       <ul>
-        <li className="home">
+        <li className={activePage === "/student_index" ? "active" : ""}>
           <Link to="/student_index">Home</Link>
         </li>
-        <li>
+        <li className={activePage === "/location" ? "active" : ""}>
           <Link to="/location">Location</Link>
         </li>
-        <li>About Us</li>
+        <li className={activePage === "/aboutus" ? "active" : ""}>
+          <Link to="/aboutus">About Us</Link>
+        </li>
       </ul>
 
-      <div className="AdminEdit">
+      <div className="adminNotif">
         <svg
-          className="add"
+          className="notif-add"
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-plus"
           width="24"
           height="24"
           viewBox="0 0 24 24"
           stroke-width="3"
-          stroke="#003163"
+          stroke="#EDE9E9"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -35,14 +45,14 @@ const Navbar = () => {
         </svg>
 
         <svg
-          className="edit"
+          className="notif-edit"
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-pencil"
           width="24"
           height="24"
           viewBox="0 0 24 24"
           stroke-width="3"
-          stroke="#003163"
+          stroke="#EDE9E9"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -52,9 +62,11 @@ const Navbar = () => {
           <path d="M13.5 6.5l4 4" />
         </svg>
       </div>
+
       <div className="please">
         <li>
           <svg
+            className="notif"
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-bell-filled"
             width="28"
@@ -81,6 +93,7 @@ const Navbar = () => {
         </li>
         <li>
           <svg
+            className="profile"
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-user-filled"
             width="28"
@@ -105,6 +118,7 @@ const Navbar = () => {
             />
           </svg>
         </li>
+
         <li>
           <Link to="/student_profile">Jenine Carpio</Link>
         </li>

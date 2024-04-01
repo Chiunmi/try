@@ -144,3 +144,26 @@
     display: none;
   }
 }
+
+.monthly-announce {
+  display: flex;
+  background-color: pink;
+}
+
+.monthly-edit {
+  margin-left: 50px;
+  background-color: #5ce1e6;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 2px;
+}
+
+.monthly-announce .monthly-add {
+  margin-left: 10px;
+  background-color: #7ed957;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 2px;
+}

@@ -31,18 +31,18 @@ function Home() {
         </div>
 
         <div className="announce">
-          <span className="announcement1"> Announcement</span>
+          <div className="adminAnnounce">
+            <span className="announcement1"> Announcement</span>
 
-          <div className="announcementnAdmin">
             <svg
-              className="announcementAdd"
+              className="edit"
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-plus"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               stroke-width="3"
-              stroke="#003163"
+              stroke="#EDE9E9"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -53,14 +53,14 @@ function Home() {
             </svg>
 
             <svg
-              className="announcementEdit"
+              className="add"
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-pencil"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               stroke-width="3"
-              stroke="#003163"
+              stroke="#EDE9E9"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -70,7 +70,6 @@ function Home() {
               <path d="M13.5 6.5l4 4" />
             </svg>
           </div>
-
           <div className="container2">
             <span>
               <h> Announcement 1</h>

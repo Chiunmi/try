@@ -10,7 +10,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 101;
   min-width: 400px;
   margin-left: 150px;
 }
@@ -36,7 +36,7 @@ nav ul li::before {
   content: "";
   position: absolute;
   left: 50%;
-  top: 30px;
+  bottom: -10px; /* Adjust this value to position the underline */
   transform: translateX(-50%);
   height: 4px;
   width: 80px;
@@ -46,6 +46,9 @@ nav ul li::before {
   transition: all 0.3s ease;
 }
 
+nav ul li.active::before {
+  opacity: 1;
+}
 nav ul li:hover::before {
   opacity: 1;
 }
@@ -61,10 +64,11 @@ nav li {
   cursor: pointer;
 }
 
-nav li svg {
+.notif,
+.profile {
   margin-right: 20px;
 }
-nav li svg:hover {
+.notif:hover {
   fill: grey;
 }
 
@@ -122,25 +126,27 @@ nav li svg:hover {
   /* background-color: aquamarine; */
 }
 
-.adminEdit {
+.adminNotif {
   display: flex;
-  margin-left: 59%;
+  margin-left: 60%;
+  /* background-color: pink; */
+  gap: 10px;
 }
 
-.adminEdit .add,
-.adminEdit .edit {
-  background-color: aliceblue;
-  margin-left: 10px;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  padding: 4px;
-}
-
-.adminEdit .add {
+.adminNotif .notif-edit {
+  margin-left: 20%;
   background-color: #5ce1e6;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 2px;
 }
 
-.adminEdit .edit {
+.adminNotif .notif-add {
+  margin-left: 10px;
   background-color: #7ed957;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 2px;
 }
