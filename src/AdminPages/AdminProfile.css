@@ -5,7 +5,7 @@
   margin: 100px 0px 20px 240px;
   width: 1630px;
   height: 100%;
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-y: auto;
   max-height: fit-content;
 }
 
@@ -152,4 +152,112 @@
   height: 100%;
   margin-top: 20px;
   margin-bottom: 10%;
+}
+
+.account-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay background */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-popup.show {
+  display: flex;
+}
+
+.popup-inner {
+  position: relative;
+  background-color: #003163;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  color: white;
+}
+
+.close-icon svg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cAccount-container {
+  max-width: 700px;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.cAccount-container::-webkit-scrollbar {
+  display: none;
+}
+
+h3 {
+  margin: 10px 0px;
+}
+/* Styles for form elements */
+form {
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.button-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.jhs-button {
+  display: flex;
+  margin: 2% 37%;
+}
+
+.gLevel-button {
+  background-color: #fafafa;
+  border: 2px solid #8a8a8a;
+  color: #8a8a8a;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.gLevel-button:hover {
+  background-color: #003163;
+  border: 2px solid #003163;
+  color: white;
 }
