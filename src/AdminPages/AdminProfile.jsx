@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileLayout from "../Layout/ProfileLayout";
 import "./AdminProfile.css";
+import { Link } from "react-router-dom";
 
 function AdminProfile() {
   return (
@@ -15,7 +16,9 @@ function AdminProfile() {
           </div>
           <div className="c1_button">
             <button class="cAccount">Create Account</button>
-            <button class="inventory">View Inventory</button>
+            <Link to="/admin_inventory">
+              <button className="inventory">View Inventory</button>
+            </Link>
           </div>
         </div>
         <span className="chartStat"> Chart Statistics </span>
