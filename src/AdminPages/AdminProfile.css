@@ -91,14 +91,6 @@
   background-color: #003163;
   border: 2px solid #003163;
   color: white;
-  padding: 10px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 0px 40px 4px 0px;
-  cursor: pointer;
-  border-radius: 12px;
 }
 
 .healthRecord,
@@ -237,27 +229,49 @@ button[type="submit"] {
   justify-content: center;
 }
 
-.jhs-button {
-  display: flex;
-  margin: 2% 37%;
-}
-
-.gLevel-button {
+.category-button,
+.gLevel-button,
+.section-button {
   background-color: #fafafa;
   border: 2px solid #8a8a8a;
   color: #8a8a8a;
-  padding: 5px 10px;
+  padding: 0px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  margin: 0px 10px;
+  margin: 0px 40px 4px 0px;
   cursor: pointer;
   border-radius: 12px;
 }
 
-.gLevel-button:hover {
+.category-button:hover,
+.category-button.selected,
+.gLevel-button:hover,
+.gLevel-button.selected,
+.section-button:hover,
+.section-button.selected {
   background-color: #003163;
   border: 2px solid #003163;
   color: white;
+}
+
+.name-list li:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.name-list ul {
+  list-style-type: decimal;
+}
+
+.name-list h3 {
+  text-align: center;
+}
+
+.student-info,
+.name-list ul {
+  background-color: #c0c2c2;
+  padding: 1% 2%;
+  margin: 1% 0% 2% 0%;
 }

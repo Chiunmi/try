@@ -6,43 +6,89 @@ import { Link } from "react-router-dom";
 const AdminProfile = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedGrade, setSelectedGrade] = useState(null);
-  const [showForm, setShowForm] = useState(false); // Initialize showForm state
+  const [selectedSection, setSelectedSection] = useState(null);
+  const [selectedStudent, setSelectedStudent] = useState(null);
+  const [showForm, setShowForm] = useState(false);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-    setSelectedGrade(null); // Reset selected grade when category changes
+    setSelectedGrade(null);
+    setSelectedSection(null);
+    setSelectedStudent(null);
   };
 
   const handleGradeClick = (grade) => {
     setSelectedGrade(grade);
+    setSelectedSection(null);
+    setSelectedStudent(null);
+  };
+
+  const handleSectionClick = (section) => {
+    setSelectedSection(section);
+    setSelectedStudent(null); // Clear student info when changing sections
+  };
+
+  const handleNameClick = (studentName) => {
+    // Assuming you have a function to fetch student info based on the name
+    const studentInfo = getStudentInfoByName(studentName); // Function to get student info
+    setSelectedStudent(studentInfo);
   };
 
   const toggleForm = () => {
-    setShowForm(!showForm); // Toggle showForm state
+    setShowForm(!showForm);
   };
+
+  const getStudentInfoByName = (studentName) => {
+    // Assuming this is a placeholder function that returns mock data for demonstration
+    const mockStudentData = {
+      name: studentName,
+      section: "G7-Counsel",
+      age: 13,
+      birthdate: "June 25, 2010",
+      // Add other student information as needed
+    };
+    return mockStudentData;
+  };
+
   return (
     <ProfileLayout>
       <div className="adminProfile">
         <span className="healthRecord"> Health Record </span>
         <div className="container_one">
           <div className="c2_button">
-            <button className="jhs" onClick={() => handleCategoryClick("JHS")}>
+            {/* Category buttons */}
+            <button
+              className={`category-button ${
+                selectedCategory === "JHS" ? "selected" : ""
+              }`}
+              onClick={() => handleCategoryClick("JHS")}
+            >
               Junior High School
             </button>
-            <button className="shs" onClick={() => handleCategoryClick("SHS")}>
+            <button
+              className={`category-button ${
+                selectedCategory === "SHS" ? "selected" : ""
+              }`}
+              onClick={() => handleCategoryClick("SHS")}
+            >
               Senior High School
             </button>
             <button
-              className="college"
+              className={`category-button ${
+                selectedCategory === "College" ? "selected" : ""
+              }`}
               onClick={() => handleCategoryClick("College")}
             >
               College
             </button>
           </div>
+
           <div className="c1_button">
+            {/* Button for Create Account */}
             <button className="cAccount" onClick={toggleForm}>
               Create Account
             </button>
+            {/* Link to admin inventory */}
             <Link to="/admin_inventory">
               <button className="inventory">View Inventory</button>
             </Link>
@@ -52,31 +98,115 @@ const AdminProfile = () => {
         {/* Display Selected Category Information */}
         {selectedCategory === "JHS" && (
           <div className="selected-category">
-            <h2>{selectedCategory} Information</h2>
+            {/* Grade buttons */}
             <div className="jhs-button">
               <button
-                className="gLevel-button"
+                className={`gLevel-button ${
+                  selectedGrade === "Grade 7" ? "selected" : ""
+                }`}
                 onClick={() => handleGradeClick("Grade 7")}
               >
                 Grade 7
               </button>
               <button
-                className="gLevel-button"
+                className={`gLevel-button ${
+                  selectedGrade === "Grade 8" ? "selected" : ""
+                }`}
                 onClick={() => handleGradeClick("Grade 8")}
               >
                 Grade 8
               </button>
+              {/* Add other grade buttons */}
+            </div>
+            {/* Section buttons */}
+            {selectedGrade === "Grade 7" && (
+              <div className="section-buttons">
+                <button
+                  className={`section-button ${
+                    selectedSection === "G7-Compassion" ? "selected" : ""
+                  }`}
+                  onClick={() => handleSectionClick("G7-Compassion")}
+                >
+                  G7-Compassion
+                </button>
+                <button
+                  className={`section-button ${
+                    selectedSection === "G7-Courage" ? "selected" : ""
+                  }`}
+                  onClick={() => handleSectionClick("G7-Courage")}
+                >
+                  G7-Courage
+                </button>
+                <button
+                  className={`section-button ${
+                    selectedSection === "G7-Counsel" ? "selected" : ""
+                  }`}
+                  onClick={() => handleSectionClick("G7-Counsel")}
+                >
+                  G7-Counsel
+                </button>
+              </div>
+            )}
+
+            {/* Render grade-specific information */}
+            {selectedGrade && (
+              <div className="grade-info">
+                {/* Render grade-specific information here */}
+                <div className="name-list"></div>
+              </div>
+            )}
+
+            {selectedSection === "G7-Compassion" && !selectedStudent && (
+              <div className="name-list">
+                {/* List of clickable names */}
+                <h3>{selectedSection} </h3>
+                <ul>
+                  <li onClick={() => handleNameClick("Ahehi, Lobarn A.")}>
+                    Ahehi, Lobarn A.
+                  </li>
+                  <li onClick={() => handleNameClick("Bdjgd Loejd C.")}>
+                    Bdjgd Loejd C.
+                  </li>
+                  <li onClick={() => handleNameClick("Csjfjds Opsdfkdf S.")}>
+                    Csjfjds Opsdfkdf S.
+                  </li>
+                  {/* Add more names as needed */}
+                </ul>
+              </div>
+            )}
+
+            {/* Display selected student's information */}
+            {selectedStudent && (
+              <div className="student-info">
+                <h3>{selectedStudent.name}</h3>
+                <p>Name: {selectedStudent.name}</p>
+                <p>Gr./Section: {selectedStudent.section}</p>
+                <p>Age: {selectedStudent.age}</p>
+                <p>Birthdate: {selectedStudent.birthdate}</p>
+                {/* Render other personal information */}
+              </div>
+            )}
+          </div>
+        )}
+
+        {selectedCategory === "SHS" && (
+          <div className="selected-category">
+            <div className="shs-button">
               <button
-                className="gLevel-button"
-                onClick={() => handleGradeClick("Grade 9")}
+                className={`gLevel-button ${
+                  selectedGrade === "Grade 11" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("Grade 11")}
               >
-                Grade 9
+                Grade 11
               </button>
               <button
-                className="gLevel-button"
-                onClick={() => handleGradeClick("Grade 10")}
+                className={`gLevel-button ${
+                  selectedGrade === "Grade 12" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("Grade 12")}
               >
-                Grade 10
+                Grade 12
               </button>
             </div>
             {/* Display grade-specific information */}
@@ -89,20 +219,72 @@ const AdminProfile = () => {
           </div>
         )}
 
-        {selectedCategory === "SHS" && (
+        {selectedCategory === "College" && (
           <div className="selected-category">
-            <div className="shs-button">
+            <div className="college-button">
               <button
-                className="gLevel-button"
-                onClick={() => handleGradeClick("Grade 7")}
+                className={`gLevel-button ${
+                  selectedGrade === "CBAA" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("CBAA")}
               >
-                Grade 11
+                CBAA
               </button>
               <button
-                className="gLevel-button"
-                onClick={() => handleGradeClick("Grade 8")}
+                className={`gLevel-button ${
+                  selectedGrade === "CHTM" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("CHTM")}
               >
-                Grade 12
+                CHTM
+              </button>
+              <button
+                className={`gLevel-button ${
+                  selectedGrade === "COI" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("COI")}
+              >
+                COI
+              </button>
+              <button
+                className={`gLevel-button ${
+                  selectedGrade === "CET" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("CET")}
+              >
+                CET
+              </button>
+              <button
+                className={`gLevel-button ${
+                  selectedGrade === "COE" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("COE")}
+              >
+                COE
+              </button>
+              <button
+                className={`gLevel-button ${
+                  selectedGrade === "CASSW" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("CASSW")}
+              >
+                CASSW
+              </button>
+              <button
+                className={`gLevel-button ${
+                  selectedGrade === "CNAH" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("CNAH")}
+              >
+                CNAH
+              </button>
+              <button
+                className={`gLevel-button ${
+                  selectedGrade === "COCRIM" ? "selected" : ""
+                }`}
+                onClick={() => handleGradeClick("COCRIM")}
+              >
+                COCRIM
               </button>
             </div>
             {/* Display grade-specific information */}
