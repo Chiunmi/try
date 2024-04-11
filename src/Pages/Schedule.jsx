@@ -1,27 +1,54 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import MainLayout from "../Layout/MainLayout";
-import DatePicker from "react-datepicker";
 import "./SchedulePage.css";
-import classNames from "classnames";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 
 function Schedule() {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const calendarRef = useRef(null);
+  const [events, setEvents] = useState([]);
+
+  const handleDateClick = (info) => {
+    const startDate = new Date(info.dateStr);
+    const endDate = new Date(info.dateStr);
+    addEvent(startDate, endDate);
+  };
+
+  const handleAddEvent = () => {
+    const currentDate = new Date();
+    addEvent(currentDate, currentDate);
+  };
+
+  const addEvent = (start, end) => {
+    const title = prompt("Enter event title:");
+    if (title) {
+      const newEvent = { title, start, end };
+      calendarRef.current.getApi().addEvent(newEvent);
+      setEvents([...events, newEvent]);
+    }
+  };
 
   return (
     <MainLayout>
       <div className="schedule-page">
-        <div className="calendar-container">
-          <h1 className="calendar-title">Editable Calendar</h1>
-          <DatePicker
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
-            inline
-            showMonthDropdown
-            showYearDropdown
-            dropdownMode="select"
-            className={classNames("react-datepicker", "calendar")}
-          />
-        </div>
+        <button onClick={handleAddEvent}>Add Event</button>
+        <FullCalendar
+          ref={calendarRef}
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          initialView={"dayGridMonth"}
+          headerToolbar={{
+            start: "today prev,next",
+            center: "title",
+            end: "dayGridMonth,timeGridWeek,timeGridDay",
+          }}
+          height={"90vh"}
+          editable={true}
+          selectable={true}
+          select={handleDateClick}
+          events={events}
+        />
       </div>
     </MainLayout>
   );
