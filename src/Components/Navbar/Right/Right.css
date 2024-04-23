@@ -139,7 +139,7 @@
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1600px) {
   .announcement {
     display: none;
   }
@@ -147,7 +147,7 @@
 
 .monthly-announce {
   display: flex;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .monthly-edit {

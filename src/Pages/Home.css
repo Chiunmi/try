@@ -1,11 +1,20 @@
 .index {
-  display: absolute;
   position: fixed;
-  /* background-color: yellow;   */
-  width: 67%;
-  height: 300px;
-  margin-left: 240px;
-  margin-top: 4.5%;
+  /* background-color: pink; */
+  width: calc(80% - 260px);
+  height: auto;
+  margin-left: calc(0% + 240px);
+  margin-top: 5%; /* Adjust as needed */
+
+  /* Example of right margin */
+  margin-right: 20px; /* Adjust as needed */
+}
+
+@media (max-width: 1600px) {
+  .index {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+  }
 }
 
 .hello {
@@ -14,78 +23,63 @@
   color: #252525;
   margin-left: -15px;
 }
-.welcome {
+
+.welcome-content {
   width: 100%;
-  height: 300px;
+  height: auto;
   background: linear-gradient(to right, #003163, #13072e);
-  border-radius: 10px;
+  border-radius: 20px;
   color: white;
   margin-top: 10px;
+  padding: 20px;
 }
 
-.welcome h1 {
-  padding: 40px 50px 40px 30px;
+.welcome-content h1 {
+  padding: 20px 30px 40px 10px;
   width: 80%;
   font-size: 40px;
   font-weight: 300;
 }
 
-.welcome p {
+.welcome-content p {
   padding: 0px 50px 40px 30px;
   margin-top: -30px;
   width: 70%;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
 }
 
-.hi {
-  display: absolute;
-  margin-left: 76.6%;
-  margin-top: -19.7%;
-}
-.hi img {
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
-  clip-path: polygon(0 0, 70% 0, 70% 100%, 0 100%);
+.buttons {
+  display: flex;
+  margin-left: 50px;
 }
 
-.buttons {
-  margin-left: 50px;
-  margin-top: -80px;
-}
-.learnMore {
-  background-color: white;
-  border: none;
-  color: #003163;
+.learnMore,
+.upgrade {
   padding: 10px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  margin: 0px 10px 4px 0px;
+  margin-right: 10px;
   cursor: pointer;
   border-radius: 12px;
+}
+
+.learnMore {
+  background-color: white;
+  border: none;
+  color: #003163;
 }
 
 .upgrade {
   background-color: transparent;
   border: 2px solid white;
   color: white;
-  padding: 10px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 0px 10px 4px 0px;
-  cursor: pointer;
-  border-radius: 12px; /* Add border radius to round the corners */
 }
 
 .announce {
-  /* Set a maximum height for the scrollable area */
   margin-top: 2%;
-  /* background-color: yellow; */
 }
 
 .announcement1 {
@@ -107,7 +101,7 @@
 
 .container2 {
   display: grid;
-  row-gap: 30px;
+  row-gap: 20px;
   align-content: space-between;
 }
 
@@ -115,6 +109,7 @@
   color: #8a8a8a;
   font-size: 14px;
   font-weight: 400;
+  text-align: left;
 }
 
 .container2 p {
@@ -122,26 +117,4 @@
   font-size: 14px;
   padding-left: 90%;
   cursor: pointer;
-}
-.adminAnnounce {
-  display: flex;
-  /* background-color: pink; */
-}
-
-.adminAnnounce .edit {
-  margin-left: 20px;
-  background-color: #5ce1e6;
-  border-radius: 50%;
-  width: 26px;
-  height: 26px;
-  padding: 2px;
-}
-
-.adminAnnounce .add {
-  margin-left: 10px;
-  background-color: #7ed957;
-  border-radius: 50%;
-  width: 26px;
-  height: 26px;
-  padding: 2px;
 }

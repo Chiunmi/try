@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="container">
       <ul>
         <li className={activePage === "/student_index" ? "active" : ""}>
-          <Link to="/student_index">Home</Link>
+          <Link to="/home">Home</Link>
         </li>
         <li className={activePage === "/location" ? "active" : ""}>
           <Link to="/location">Location</Link>
