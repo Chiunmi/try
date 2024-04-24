@@ -1,3 +1,18 @@
 .schedule-page {
   margin: 7% 22% 2% 13%;
 }
+@media (max-width: 1600px) {
+  .schedule {
+    width: calc(100% - 270px);
+    margin-left: 250px;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .schedule {
+    width: calc(100% - 150px);
+    margin-left: 14%;
+    margin-top: 15%;
+  }
+}

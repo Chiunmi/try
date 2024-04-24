@@ -1,5 +1,4 @@
 .adminProfile {
-  /* display: block; */
   position: fixed;
   /* background-color: wheat; */
   margin: 100px 0px 20px 240px;
@@ -9,25 +8,29 @@
   max-height: fit-content;
 }
 
+@media (max-width: 600px) {
+  .adminProfile {
+    width: calc(100% - 150px);
+    margin-left: 130px;
+    margin-top: 15%;
+  }
+}
 .adminProfile::-webkit-scrollbar {
   display: none;
 }
 
 .container_one {
-  /* background-color: #8a8a8a; */
   display: flex;
   justify-content: space-between;
   padding: 0 0 0px 20px;
 }
 
 .c1_button {
-  /* background-color: aqua; */
   display: flex;
   justify-content: space-between;
 }
 
 .c2_button {
-  /* background-color: aqua; */
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
@@ -185,7 +188,6 @@
   height: 600px;
   overflow-y: auto;
 }
-
 .cAccount-container::-webkit-scrollbar {
   display: none;
 }
@@ -274,4 +276,96 @@ button[type="submit"] {
   background-color: #c0c2c2;
   padding: 1% 2%;
   margin: 1% 0% 2% 0%;
+}
+
+@media (max-width: 1600px) {
+  .adminProfile {
+    width: calc(100% - 270px);
+    margin-left: 250px;
+    margin-top: 10%;
+  }
+
+  .category-button,
+  .gLevel-button,
+  .section-button {
+    padding: 0px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0px 20px 4px 0px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .cAccount,
+  .inventory {
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px 20px 50px 0px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .c1_button {
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: px; */
+  }
+
+  .c2_button {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .adminProfile {
+    width: calc(100% - 150px);
+    margin-left: 130px;
+    margin-top: 15%;
+  }
+  .category-button,
+  .gLevel-button,
+  .section-button {
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    margin: 0px 10px 10px 0px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .cAccount,
+  .inventory {
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    margin: 0px 10px 60px 0px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .c1_button {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .c2_button {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container_one {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
 }

@@ -2,7 +2,8 @@
   position: relative; /* Change to relative */
   margin: 5% 12%;
   width: 100%; /* Adjusted width */
-  max-width: 138vh; /* Maximum width */
+  max-width: 138vh;
+  height: 100%;
 }
 
 .map-container {
@@ -18,4 +19,30 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.location-content {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to right, #003163, #13072e);
+  border-radius: 20px;
+  color: white;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+@media (max-width: 1600px) {
+  .location {
+    width: calc(100% - 270px);
+    margin-left: 250px;
+    margin-top: 10%;
+  }
+}
+@media (max-width: 600px) {
+  .location {
+    width: calc(100% - 150px);
+
+    margin-left: 130px;
+    margin-top: 17%;
+  }
 }

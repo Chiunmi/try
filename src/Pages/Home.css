@@ -4,24 +4,20 @@
   width: calc(80% - 260px);
   height: auto;
   margin-left: calc(0% + 240px);
-  margin-top: 5%; /* Adjust as needed */
-
-  /* Example of right margin */
-  margin-right: 20px; /* Adjust as needed */
+  margin-top: 5%;
+  max-height: 100vh; /* Set the maximum height to 100% of the viewport height */
+  overflow-y: auto;
 }
 
-@media (max-width: 1600px) {
-  .index {
-    width: calc(100% - 250px);
-    margin-left: 250px;
-  }
+.index::-webkit-scrollbar {
+  display: none;
 }
 
 .hello {
   font-size: 36px;
   font-weight: 500;
   color: #252525;
-  margin-left: -15px;
+  /* margin-left: -15px; */
 }
 
 .welcome-content {
@@ -91,7 +87,7 @@
   padding: 20px 30px;
   margin-top: 20px;
   border-radius: 10px;
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-y: auto;
   max-height: 500px;
 }
 
@@ -117,4 +113,59 @@
   font-size: 14px;
   padding-left: 90%;
   cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .index {
+    width: calc(100% - 270px);
+    margin-left: 250px;
+    margin-top: 10%;
+  }
+  .welcome-content p {
+    padding: 40px 10px 30px 10px;
+    width: 95%;
+    text-align: justify;
+  }
+
+  .buttons {
+    display: flex;
+    margin-left: 30px;
+  }
+
+  .container2 p {
+    padding-left: 80%;
+  }
+
+  .announce {
+    margin-bottom: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .index {
+    width: calc(100% - 150px);
+    margin-left: 130px;
+    margin-top: 15%;
+  }
+  .welcome-content h1 {
+    padding: 10px 30px 20px 10px;
+    width: 90%;
+  }
+  .welcome-content p {
+    padding: 40px 10px 20px 0px;
+    width: 95%;
+    text-align: justify;
+  }
+
+  .buttons {
+    display: flex;
+    margin: 0;
+  }
+
+  .container2 p {
+    padding-left: 60%;
+  }
+
+  .announce {
+    margin-bottom: 100px;
+  }
 }

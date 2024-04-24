@@ -38,7 +38,7 @@ const Sidebar = () => {
               <path d="M10 14h4" />
               <path d="M12 12v4" />
             </svg>
-            Services
+            <span className="nav-label">Services</span>
           </Link>
         </li>
 
@@ -69,7 +69,7 @@ const Sidebar = () => {
               <path d="M7.01 17h.005" />
               <path d="M10.01 17h.005" />
             </svg>
-            Schedules
+            <span className="nav-label">Schedules</span>
           </Link>
         </li>
 
@@ -91,7 +91,7 @@ const Sidebar = () => {
               <path d="M17.011 9.385v5.128l3.989 3.487v-12z" />
               <path d="M3.887 6h10.08c1.468 0 3.033 1.203 3.033 2.803v8.196a.991 .991 0 0 1 -.975 1h-10.373c-1.667 0 -2.652 -1.5 -2.652 -3l.01 -8a.882 .882 0 0 1 .208 -.71a.841 .841 0 0 1 .67 -.287z" />
             </svg>
-            Telemed
+            <span className="nav-label">Telemed</span>
           </Link>
         </li>
 
@@ -115,7 +115,7 @@ const Sidebar = () => {
               <path d="M9 8h4" />
               <path d="M9 12h2" />
             </svg>
-            Request Forms
+            <span className="nav-label">Request Forms</span>
           </Link>
         </li>
 
@@ -123,21 +123,25 @@ const Sidebar = () => {
           <Link to="/events">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-heartbeat"
+              class="icon icon-tabler icon-tabler-timeline-event-plus"
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              stroke-width="1.5"
               stroke="#8A8A8A"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572" />
-              <path d="M3 13h2l2 3l2 -6l1 3h3" />
+              <path d="M12 20m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M10 20h-6" />
+              <path d="M14 20h6" />
+              <path d="M12 15l-2 -2h-3a1 1 0 0 1 -1 -1v-8a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-3l-2 2z" />
+              <path d="M10 8h4" />
+              <path d="M12 6v4" />
             </svg>
-            Events
+            <span className="nav-label">Events</span>
           </Link>
         </li>
 
@@ -159,51 +163,55 @@ const Sidebar = () => {
               <path d="M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572" />
               <path d="M3 13h2l2 3l2 -6l1 3h3" />
             </svg>
-            Health Tips
+            <span className="nav-label">Health Tips</span>
           </Link>
         </li>
         <li className={activePage === "/healthTips" ? "active" : ""}>
           <Link to="/healthTips">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-heartbeat"
+              class="icon icon-tabler icon-tabler-archive"
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              stroke-width="1.5"
               stroke="#8A8A8A"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572" />
-              <path d="M3 13h2l2 3l2 -6l1 3h3" />
+              <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+              <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+              <path d="M10 12l4 0" />
             </svg>
-            Archive
+            <span className="nav-label">Archive</span>
           </Link>
         </li>
       </ul>
       <ul className="logout">
-        <li onclick="window.location.href='/html/signin.html';">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-logout"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="#8A8A8A"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
-            <path d="M9 12h12l-3 -3" />
-            <path d="M18 15l3 -3" />
-          </svg>
-          Logout
+        <li className={activePage === "/login" ? "active" : ""}>
+          <Link to="/login">
+            {/* Add a span around the text */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-logout"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="#8A8A8A"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+              <path d="M9 12h12l-3 -3" />
+              <path d="M18 15l3 -3" />
+            </svg>
+            <span className="nav-label">Logout</span>{" "}
+          </Link>
         </li>
       </ul>
     </div>

@@ -6,7 +6,7 @@ nav {
   padding-left: 12%;
   position: fixed;
   top: 0;
-  left: 3%;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,6 +73,83 @@ nav li {
 }
 
 /* Media query for smaller screens */
+
+.adminNotif {
+  display: flex;
+  margin-left: 60%;
+  /* background-color: pink; */
+  gap: 10px;
+}
+
+.please {
+  display: flex;
+  position: absolute;
+  top: 18px;
+  right: 14%;
+}
+
+@media (max-width: 1600px) {
+  .please {
+    position: static;
+    margin-top: 10px;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #333; */
+  padding: 10px 20px;
+}
+
+.container {
+  list-style-type: none;
+  display: flex;
+}
+
+.container li {
+  margin-right: 20px;
+}
+
+.menu-icon {
+  display: none; /* Initially hide the menu icon */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 700px) {
+  .container li {
+    display: none; /* Hide navigation links */
+  }
+
+  .menu-icon {
+    display: flex; /* Show the menu icon */
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-left: 280px;
+  }
+
+  .menu-open .container {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  .menu-open .dropdown-menu {
+    display: flex; /* Show the dropdown menu when menu is open */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 100;
+  }
+}
+
 @media (max-width: 768px) {
   nav ul li {
     margin: 5px 10px;
@@ -83,6 +160,11 @@ nav li {
     display: sticky;
     margin: 5px 10px;
     font-size: 16px;
+  }
+
+  .please {
+    position: static;
+    margin-top: 20px;
   }
 }
 
@@ -118,35 +200,4 @@ nav li {
   nav li svg {
     display: none;
   }
-}
-
-.please {
-  display: flex;
-  justify-content: space-between;
-  /* background-color: aquamarine; */
-}
-
-.adminNotif {
-  display: flex;
-  margin-left: 60%;
-  /* background-color: pink; */
-  gap: 10px;
-}
-
-.adminNotif .notif-edit {
-  margin-left: 20%;
-  background-color: #5ce1e6;
-  border-radius: 50%;
-  width: 26px;
-  height: 26px;
-  padding: 2px;
-}
-
-.adminNotif .notif-add {
-  margin-left: 10px;
-  background-color: #7ed957;
-  border-radius: 50%;
-  width: 26px;
-  height: 26px;
-  padding: 2px;
 }

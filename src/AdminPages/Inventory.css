@@ -74,3 +74,11 @@ td {
 tr:last-child td {
   border-bottom: none; /* Remove bottom border for the last row */
 }
+
+@media (max-width: 1600px) {
+  .admin-inventory {
+    width: calc(100% - 270px);
+    margin-left: 250px;
+    margin-top: 10%;
+  }
+}
