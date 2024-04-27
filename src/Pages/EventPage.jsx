@@ -167,11 +167,11 @@ function EventPage() {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-          </div>
-          <div className="form-button">
-            <button className="interested" onClick={handleUploadSubmitClick}>
-              Interested
-            </button>
+            <div className="form-button">
+              <button className="interested" onClick={handleUploadSubmitClick}>
+                Interested
+              </button>
+            </div>
           </div>
         </div>
       </div>

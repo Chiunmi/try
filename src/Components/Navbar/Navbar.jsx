@@ -40,7 +40,7 @@ const Navbar = () => {
           </svg>
         </div>
         <ul>
-          <li className={activePage === "/student_index" ? "active" : ""}>
+          <li className={activePage === "/home" ? "active" : ""}>
             <Link to="/home">Home</Link>
           </li>
           <li className={activePage === "/location" ? "active" : ""}>
@@ -51,6 +51,23 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
+      {/* Dropdown menu */}
+      {menuOpen && (
+        <div className="dropdown-menu">
+          <ul>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+            <li>
+              <Link to="/settings">Settings</Link>
+            </li>
+            <li>
+              <Link to="/logout">Logout</Link>
+            </li>
+          </ul>
+        </div>
+      )}
 
       <div className="please">
         <li>

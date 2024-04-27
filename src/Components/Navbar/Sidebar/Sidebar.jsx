@@ -166,8 +166,8 @@ const Sidebar = () => {
             <span className="nav-label">Health Tips</span>
           </Link>
         </li>
-        <li className={activePage === "/healthTips" ? "active" : ""}>
-          <Link to="/healthTips">
+        <li className={activePage === "/archive" ? "active" : ""}>
+          <Link to="/archive">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-archive"

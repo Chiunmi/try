@@ -337,3 +337,20 @@
   width: 100px;
   border-top: 4px dashed #061e44;
 }
+
+@media (max-width: 1600px) {
+  .about {
+    width: calc(100% - 270px);
+    margin-left: 250px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    width: calc(100% - 150px);
+    margin-left: 130px;
+    margin-top: 17%;
+  }
+}

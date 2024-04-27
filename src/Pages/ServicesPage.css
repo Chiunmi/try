@@ -2,6 +2,7 @@
   height: 100vh;
   display: grid;
   place-items: start;
+  width: calc(100% - 270px);
   margin: 5% 1% 1% 12%;
 }
 
@@ -29,6 +30,31 @@
   object-fit: cover;
 }
 
-/* .slider.active {
-  cursor: grabbing;
-} */
+@media (max-width: 1600px) {
+  .services {
+    width: calc(100% - 270px);
+    margin-left: 250px;
+    margin-top: 10%;
+  }
+
+  .slider {
+    width: 78vw;
+    height: 45vh;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    cursor: grab;
+  }
+}
+
+@media (max-width: 600px) {
+  .services {
+    width: calc(100% - 150px);
+    margin-left: 22%;
+    margin-top: 15%;
+  }
+
+  .slider-image {
+    width: 75vw;
+    object-fit: cover;
+  }
+}

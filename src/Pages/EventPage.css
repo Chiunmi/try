@@ -10,7 +10,8 @@
   border-radius: 20px;
   margin-top: 2%;
   margin-left: 2%;
-  height: 350px;
+  height: fit-content;
+  position: relative; /* Added position relative */
 }
 
 .event-title {
@@ -20,23 +21,22 @@
 }
 
 .event-about {
-  /* background-color: pink; */
   max-width: 100%;
   height: fit-content;
   font-size: 14px;
   font-weight: 400;
   padding-top: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .about-line::before {
   content: "";
   position: absolute;
-  left: 46%;
-  top: 40%;
-  transform: translateX(-50%);
+  left: 50%;
+  bottom: 45%;
+  transform: translateX(-50%) translateY(50%);
   height: 4px;
-  width: 1200px;
+  width: 95%;
   background-color: #061e44;
 }
 
@@ -48,7 +48,7 @@
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 .interested {
@@ -60,7 +60,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  margin: 110px 10px 10px 0px;
+  margin: 10px;
   cursor: pointer;
   border-radius: 12px;
 }
@@ -94,4 +94,21 @@
   width: 26px;
   height: 26px;
   padding: 2px;
+}
+
+@media (max-width: 1600px) {
+  .event {
+    width: calc(100% - 270px);
+    margin-left: 250px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .event {
+    width: calc(100% - 150px);
+    margin-left: 130px;
+    margin-top: 17%;
+  }
 }

@@ -15,6 +15,7 @@ import StudentIndex from "./StudentPages/StudentIndex.jsx";
 
 import AdminProfile from "./AdminPages/AdminProfile.jsx";
 import Inventory from "./AdminPages/Inventory.jsx";
+import Archive from "./AdminPages/Archive.jsx";
 
 import ServicesPage from "./Pages/ServicesPage.jsx";
 import Schedule from "./Pages/Schedule.jsx";
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
   {
     path: "admin_inventory",
     element: <Inventory />,
+  },
+  {
+    path: "archive",
+    element: <Archive />,
   },
 ]);
 

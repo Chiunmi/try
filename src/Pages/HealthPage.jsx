@@ -68,9 +68,7 @@ function HealthPage() {
               your health.
             </p>
           </div>
-        </div>
-        <div className="tip-container2">
-          <div className="tip4">
+          <div className="tip1">
             <div className="number">
               4<p>Drink Water and Stay Hydrated, and Limit Sugared Beverages</p>
             </div>
@@ -93,7 +91,7 @@ function HealthPage() {
               self-quarantines.{" "}
             </p>
           </div>
-          <div className="tip6">
+          <div className="tip1">
             <div className="number">
               6 <p>Reduce Sitting and Screen Time </p>
             </div>
@@ -108,6 +106,7 @@ function HealthPage() {
             </p>
           </div>
         </div>
+        <div className="tip-container2"></div>
       </div>
     </MainLayout>
   );

@@ -1,40 +1,33 @@
 import React from "react";
 import MainLayout from "../Layout/MainLayout";
-import { Container, Row, Col, Button } from "react-bootstrap";
 import "./Home.css";
 
 function Home() {
   return (
     <MainLayout>
-      <Container fluid className="index">
-        <Row className="welcome">
-          <Col md={6} className="welcome-col">
-            <span className="hello">Hello, Jenine!</span>
-            <div className="welcome-content">
-              <h1>
-                Welcome to Philippine Christian University Clinic! Have a
-                healthy day :)
-              </h1>
-              <p>
-                Welcome to Philippine Christian University Welcome to Philippine
-                Christian University may mission vision ba sila ilagya dito di
-                ko alam ahahahaha
-              </p>
-              <div className="buttons">
-                <Button variant="primary" className="learnMore">
-                  Learn More
-                </Button>
-                <Button variant="secondary" className="upgrade">
-                  Upgrade
-                </Button>
-              </div>
+      <div className="index">
+        <div className="welcome">
+          <span className="hello">Hello, Jenine!</span>
+          <div className="welcome-content">
+            <h1>
+              Welcome to Philippine Christian University Clinic! Have a healthy
+              day :)
+            </h1>
+            <p>
+              Welcome to Philippine Christian University Welcome to Philippine
+              Christian University may mission vision ba sila ilagya dito di ko
+              alam ahahahaha
+            </p>
+            <div className="buttons">
+              <button class="learnMore">Learn More</button>
+              <button class="upgrade">Upgrade</button>
             </div>
-          </Col>
-        </Row>
+          </div>
+        </div>
 
-        <Row className="announce">
+        <div className="announce">
           <span className="announcement1">Announcement</span>
-          <Col md={12} className="container2">
+          <div className="container2">
             <span>
               <h>Announcement 1</h>
               <h2>
@@ -75,9 +68,9 @@ function Home() {
               </h2>
               <p>{" >"} See details</p>
             </span>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </MainLayout>
   );
 }
